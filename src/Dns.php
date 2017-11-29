@@ -91,7 +91,7 @@ class Dns
     {
         $nameserverPart = $this->getSpecificNameserverPart();
 
-        $command = 'dig +nocmd '.$nameserverPart.' '.escapeshellarg($this->domain)." {$type} +multiline +noall +answer";
+        $command = 'dig +nocmd '.$nameserverPart.' '.escapeshellarg($this->domain)." {$type} +noall +answer";
 
         $process = new Process($command);
 
